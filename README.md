@@ -29,7 +29,7 @@ python api_yamdb/manage.py migrate
 - Запустите проект:   
 python api_yamdb/manage.py runserver
 
-- Заполните тестовые данные из папки api_yamdb/static/data:
+- Заполните тестовые данные из папки api_yamdb/static/data:   
 python api_yamdb/manage.py import_csv
 
 ## Примеры нескольких запросов к нашему API:
