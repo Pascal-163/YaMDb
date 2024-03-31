@@ -12,21 +12,21 @@
 - JWT
 
 ## Запуск проекта в dev-режиме
-- Склонируйте репозиторий:
+- Склонируйте репозиторий:   
 git clone git@github.com:Pascal-163/YaMDb.git
 
-- Установите и активируйте виртуальное окружение:
-cd api_yamdb/
-python -m venv venv
-source venv/Scripts/activate
+- Установите и активируйте виртуальное окружение:   
+cd api_yamdb/   
+python -m venv venv   
+source venv/Scripts/activate   
 
-- Установите зависимости из файла requirements.txt:
+- Установите зависимости из файла requirements.txt:   
 pip install -r requirements.txt
 
-- Примените миграции:
+- Примените миграции:   
 python api_yamdb/manage.py migrate
 
-- Запустите проект:
+- Запустите проект:   
 python api_yamdb/manage.py runserver
 
 - Заполните тестовые данные из папки api_yamdb/static/data:
@@ -36,7 +36,8 @@ python api_yamdb/manage.py import_csv
 
 - Получение пользователя по username
 
-''' http://127.0.0.1:8000/api/v1/users/{username}/
+````
+ http://127.0.0.1:8000/api/v1/users/{username}/
 {
 "username": "string",
 "email": "user@example.com",
@@ -44,19 +45,23 @@ python api_yamdb/manage.py import_csv
 "last_name": "string",
 "bio": "string",
 "role": "user"
-}'''
+}
+````
 
 - Добавление новой категории
+````
 http://127.0.0.1:8000/api/v1/categories/
 {
   "name": "string",
   "slug": "string"
 }
-
+````
 - Удаление жанра
+````
 http://127.0.0.1:8000/api/v1/genres/{slug}/
-
+````
 - Получение списка всех произведений
+````
 http://127.0.0.1:8000/api/v1/titles/
 {
   "count": 0,
@@ -82,27 +87,30 @@ http://127.0.0.1:8000/api/v1/titles/
     }
   ]
 }
-
+````
 - Добавление нового отзыва
+````
 http://127.0.0.1:8000/api/v1/genres/{slug}/
 {
   "text": "string",
   "score": 1
 }
-
+````
 - Частичное обновление комментария к отзыву
+````
 http://127.0.0.1:8000/api/v1/titles/{title_id}/reviews/{review_id}/comments/{comment_id}/
 {
   "text": "string"
 }
-
+````
 - Все запросы к этому API хранятся в документации, которая станет доступна после запуска проекта по адресу:
+````
 http://127.0.0.1:8000/redoc/
-
+````
 
 ## Авторы проекта
-Аксёнов Даниил разработчик 1-Teamlead (управление пользователями)
-Шатилова Ольга разработчик 2 (модели, view, эндпоинты)
-Сидоров Алексей - разработчик 3 (отзывы, комментарии, рейтинг) 
+Аксёнов Даниил разработчик 1-Teamlead (управление пользователями)   
+Шатилова Ольга разработчик 2 (модели, view, эндпоинты)   
+Сидоров Алексей - разработчик 3 (отзывы, комментарии, рейтинг)    
 Telegram @pascal161   
 aleksid92@gmail.com
